@@ -1,0 +1,212 @@
+/* src/index.css or global styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
+  background-color: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#root {
+  max-width: 100%; /* Changed from 1400px to allow full use of space */
+  margin: 0;
+  padding: 0;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar will sit next to .main-content inside a flex row */
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
+
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 50px 100px;
+  margin-left: 300px; /* sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+/* Dashboard styling */
+.dashboard {
+  padding: 20px;
+  background-color: #0f172a;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Card styles */
+.card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card grid */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Graph grid */
+.graph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.section {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+}
+
+.read-the-docs {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Logo animation */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1em #38bdf8cc);
+  transform: scale(1.05);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1em #61dafbcc);
+  transform: rotate(360deg);
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 30px 20px;
+    margin-left: 230px; /* If sidebar shrinks on tablet */
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding: 20px 8px;
+    margin-left: 0 !important; /* Sidebar becomes drawer */
+  }
+  .dashboard {
+    padding: 12px;
+    gap: 24px;
+  }
+  .grid-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+  }
+  .graph-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 8px 2vw;
+    margin-left: 0 !important;
+  }
+  .dashboard {
+    padding: 6px;
+    gap: 14px;
+  }
+  .grid-cards,
+  .graph-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .card {
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .section {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  body, #root, .app-container, .main-content, .dashboard {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .card, .section {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+
+/* Prevent horizontal scroll everywhere */
+html, body, #root, .app-container, .main-content, .dashboard {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Table scroll fix for mobile */
+.MuiTableContainer-root {
+  overflow-x: auto !important;
+  max-width: 100vw !important;
+}
+
+/* Hide sidebar on mobile if using Drawer */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* Hide scrollbars for a cleaner look (optional) */
+body::-webkit-scrollbar,
+.MuiTableContainer-root::-webkit-scrollbar {
+  display: none;
+}

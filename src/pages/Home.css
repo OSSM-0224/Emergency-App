@@ -1,0 +1,225 @@
+/* ===============================
+   home.css  —  refined spacing
+   ===============================*/
+
+.dashboard {
+  padding: 24px;                 /* default spacing */
+  background-color: #0f172a;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ---------- Top cards ---------- */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  grid-auto-rows: 1fr; 
+}
+
+.card {
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 14.5px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #334155;
+  color: #cbd5e1;
+}
+
+/* ---------- Map + Table helpers ---------- */
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.table-container {
+  background: #0f172a;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+/* ---------- Generic section box ---------- */
+.section {
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+  min-height: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.section h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 19px;
+  color: #7dd3fc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Mid‑layout grid ---------- */
+.mid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin-top: 24px;
+   align-items: stretch; 
+}
+
+.left-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.map-panel {
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ---------- Buttons (shared) ---------- */
+.btn-group {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 1280px) {
+  .dashboard { padding: 20px; }
+}
+
+@media (max-width: 1024px) {
+  .mid-layout {
+    grid-template-columns: 1fr;
+  }
+  .map-panel {
+    grid-column: 1;
+    grid-row: auto;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard { padding: 16px; gap: 32px; }
+  .grid-cards { gap: 20px; }
+  .section { padding: 20px; margin: 20px 0; }
+}
+
+@media (max-width: 600px) {
+  .grid-cards { grid-template-columns: 1fr; gap: 16px; }
+  .section { padding: 14px; border-radius: 12px; }
+  .map-panel { padding: 16px; }
+}
+@media (max-width: 420px) {        /* tiny phones */
+  .card h4 { font-size: .9rem; }
+  .card p  { font-size: 1.4rem; }
+  .section h3 { font-size: 1rem; }
+}
+@media (max-width: 300px) {
+  .dashboard {
+    padding: 10px;
+    gap: 24px;
+  }
+
+  .card h4 {
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 0.8rem;
+    padding: 4px 0;
+  }
+
+  .section {
+    padding: 10px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .section h3 {
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+
+  .map-panel {
+    padding: 12px;
+  }
+
+  .grid-cards {
+    gap: 12px;
+  }
+
+  .btn-group {
+    gap: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
