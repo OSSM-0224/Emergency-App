@@ -2,56 +2,34 @@ Emergency Admin Dashboard
 
 A professional and modern real-time Admin Dashboard built using React, Vite, and Firebase Realtime Database. This dashboard helps administrators monitor emergency SOS alerts, visualize user statistics, and respond to real-time safety data.
 
-✨ Features
+## 🚀 Features
 
-Real-time SOS alerts with live updates from users
+- 📍 Real-time SOS alerts from users
+- 🩸 Blood group badges & distribution chart
+- 🗺️ Interactive map with user locations
+- 📊 Graphs: Efficiency, Call stats (Police, Fire, Rescue)
+- 🔍 Search & filter SOS requests
+- ✅ Resolve alerts & log history
+- 🔐 Firebase Auth (Google Sign-In supported)
+- ✨ Clean, modern responsive UI (MUI + Custom CSS)
 
-Interactive map displaying user locations (using React Leaflet)
+--------------------------------------------------------
+## 🛠️ Tech Stack
 
-Blood group insights and visual distribution
+| Tech | Usage |
+|------|-------|
+| ⚛️ React | Frontend library |
+| ⚡ Vite | Build tool |
+| 🔥 Firebase | Realtime DB + Auth |
+| 🧮 Recharts | Data visualizations |
+| 🌍 React-Leaflet | Interactive maps |
+| 🎨 Material UI | Components and theming |
+| 🧪 ESLint | Code linting |
 
-Efficiency metrics with radar and area charts
+-------------------------------------------------------
+## 📁 Folder Structure (basic)
 
-Search and filter functionality for alerts
-
-Mark and log resolved alerts
-
-Secure authentication via Firebase (Google Sign-In)
-
-Responsive UI with Material-UI and custom styling
-
-📊 Tech Stack
-
-Technology
-
-Purpose
-
-React
-
-Frontend library
-
-Vite
-
-Build tool for fast development
-
-Firebase
-
-Realtime Database & Authentication
-
-Recharts
-
-Data visualization (graphs & charts)
-
-React Leaflet
-
-Map integration
-
-Material UI
-
-UI Components and layout
-
-📂 Project Structure
-
+```bash
 src/
 ├── components/
 │   └── Header.jsx
@@ -61,8 +39,9 @@ src/
 ├── firebase.js
 ├── App.jsx
 └── main.jsx
+```
 
-🚀 Getting Started
+### 🚀 Getting Started
 
 1. Clone the repository
 
@@ -74,8 +53,6 @@ cd admin-dashboard
 npm install
 
 3. Configure Firebase
-
-Create a .env.local file in the root directory and add your Firebase config:
 
 VITE_FB_API_KEY=your_api_key
 VITE_FB_AUTH_DOMAIN=your_auth_domain
@@ -110,15 +87,10 @@ npm run dev
   }
 }
 
-👤 Author
-
-Developed by Om Mhatre
-
+✍️ Author
+Made with ❤️ by Om Mhatre
 Feel free to reach out for feedback, collaboration, or contributions.
 
-📄 License
-
-This project is licensed under the MIT License.
 
 📸 Screenshots
 
@@ -129,4 +101,7 @@ This project is licensed under the MIT License.
 ![Alerts](public/screenshots/emergency.png)
 
 ### 3. Responsive Admin Navbar
-![Alerts](public/screenshots/responsive.png)
+![Alerts](public/screenshots/responsive1.png)
+
+### 3. Responsive Report Page
+![Alerts](public/screenshots/responsivereports.png)
