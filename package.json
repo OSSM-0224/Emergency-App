@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ossm-0224.github.io/Emergency-App/",
+  "homepage": "https://OSSM-0224.github.io/Emergency-App/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
