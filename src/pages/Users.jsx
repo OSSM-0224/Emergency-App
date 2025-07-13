@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import Header from "../components/Header";
-import { rtdb } from "../firebase";
+import { rtdb } from "../firebase"; // 🔹 central instance
 // Material UI imports
 import {
   Box,
